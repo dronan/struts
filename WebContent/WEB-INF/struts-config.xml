@@ -8,5 +8,8 @@
 		<action path="/teste" type="br.com.caelum.struts.action.TesteSimplesAction">
 			<forward name="ok" path="/exemplo.jsp" />
 		</action>
+		<action path="/listaContatos" type="br.com.caelum.struts.action.ListaContatosAction">
+			<forward name="lista" path="/lista.jsp"/>
+		</action>
 	</action-mappings>
 </struts-config>              

@@ -58,6 +58,7 @@ public class ContatoDAO extends DAOException {
 
 			while (rs.next()) {
 				Contato contato = new Contato();
+				contato.setId(rs.getLong("id"));
 				contato.setNome(rs.getString("nome"));
 				contato.setEndereco(rs.getString("endereco"));
 				contato.setEmail(rs.getString("email"));
