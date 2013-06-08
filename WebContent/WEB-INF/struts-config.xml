@@ -16,8 +16,11 @@
 			<forward name="lista" path="/lista.jsp"/>
 			<forward name="vazia" path="/lista-vazia.jsp"/>
 		</action>
-		<action path="/novoContato" name="ContatoForm" type="br.com.caelum.struts.action.AdicionaContatoAction">
+		<action path="/novoContato" name="ContatoForm" input="/novo.jsp" type="br.com.caelum.struts.action.AdicionaContatoAction">
 			<forward name="ok" path="/listaContatos.do"></forward>
 		</action>
 	</action-mappings>
+	
+	<message-resources parameter="MessageResources"/>
+	                              
 </struts-config>              
