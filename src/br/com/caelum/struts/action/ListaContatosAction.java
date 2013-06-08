@@ -18,8 +18,15 @@ public class ListaContatosAction extends Action {
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
+		
 		List<Contato> lista = new ContatoDAO().getLista();
 		request.setAttribute("contatos", lista);
-		return mapping.findForward("lista");
+		
+		if (lista.isEmpty()) {
+			return mapping.findForward("vazia");
+		} else {
+			return mapping.findForward("lista");
+		}
+		
 	}
 }
