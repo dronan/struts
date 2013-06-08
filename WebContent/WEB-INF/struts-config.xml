@@ -4,6 +4,10 @@
               "http://struts.apache.org/dtds/struts-config_1_2.dtd">
 
 <struts-config>
+	<form-beans>
+		<form-bean name="ContatoForm" type="br.com.caelum.struts.form.ContatoForm"/>
+	</form-beans>
+
 	<action-mappings>
 		<action path="/teste" type="br.com.caelum.struts.action.TesteSimplesAction">
 			<forward name="ok" path="/exemplo.jsp" />
@@ -11,6 +15,9 @@
 		<action path="/listaContatos" type="br.com.caelum.struts.action.ListaContatosAction">
 			<forward name="lista" path="/lista.jsp"/>
 			<forward name="vazia" path="/lista-vazia.jsp"/>
+		</action>
+		<action path="/novoContato" name="ContatoForm" type="br.com.caelum.struts.action.AdicionaContatoAction">
+			<forward name="ok" path="/listaContatos.do"></forward>
 		</action>
 	</action-mappings>
 </struts-config>              

@@ -1,7 +1,5 @@
 package br.com.caelum.struts.action;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -12,21 +10,24 @@ import org.apache.struts.action.ActionMapping;
 
 import br.com.caelum.struts.bean.Contato;
 import br.com.caelum.struts.dao.ContatoDAO;
+import br.com.caelum.struts.form.ContatoForm;
 
-public class ListaContatosAction extends Action {
+public class AdicionaContatoAction extends Action {
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		
-		List<Contato> lista = new ContatoDAO().getLista();
-		request.setAttribute("contatos", lista);
-		
-		if (lista.isEmpty()) {
-			return mapping.findForward("vazia");
-		} else {
-			return mapping.findForward("lista");
-		}
-		
+		System.out.println("Tentando criar um novo contato");
+
+		ContatoForm formulario = (ContatoForm) form;
+
+		Contato contato = formulario.getContato();
+
+		ContatoDAO dao = new ContatoDAO();
+
+		dao.adiciona(contato);
+
+		return mapping.findForward("ok");
+
 	}
 }

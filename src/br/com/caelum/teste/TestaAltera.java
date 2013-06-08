@@ -2,8 +2,8 @@ package br.com.caelum.teste;
 
 import java.util.Calendar;
 
-import br.com.caelum.jdbc.dao.ContatoDAO;
-import br.com.caelum.jdbc.modelo.Contato;
+import br.com.caelum.struts.bean.Contato;
+import br.com.caelum.struts.dao.ContatoDAO;
 
 public class TestaAltera {
 
