@@ -9,6 +9,8 @@
 <title><bean:message key="site.titulo"/></title>
 </head>
 <body>
+<a href="mudaIdioma.do?idioma=en">EN</a> <br>
+<a href="mudaIdioma.do?idioma=pt">PT</a> <br>
 <bean:message key="menu.nome"/><br>
 <bean:message key="menu.arquivo"/><br>
 <bean:message key="menu.editar"/><br>

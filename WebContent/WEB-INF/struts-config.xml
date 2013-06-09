@@ -23,6 +23,9 @@
 		<action path="/novoContato" name="ContatoForm" input="/novo.jsp" type="br.com.caelum.struts.action.AdicionaContatoAction">
 			<forward name="ok" path="/listaContatos.do"/>
 		</action>
+		<action path="/mudaIdioma" type="br.com.caelum.struts.action.MudaIdiomaAction">
+			<forward name="ok" path="/testa-mensagens.jsp"/>
+		</action>
 	</action-mappings>
 	
 	<message-resources parameter="MessageResources"/>
