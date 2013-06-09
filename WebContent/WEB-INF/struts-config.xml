@@ -6,6 +6,7 @@
 <struts-config>
 	<form-beans>
 		<form-bean name="ContatoForm" type="br.com.caelum.struts.form.ContatoForm"/>
+		<form-bean name="RemoveContatoForm" type="br.com.caelum.struts.form.RemoveContatoForm"/>
 	</form-beans>
 
 	<action-mappings>
@@ -16,8 +17,11 @@
 			<forward name="lista" path="/lista.jsp"/>
 			<forward name="vazia" path="/lista-vazia.jsp"/>
 		</action>
+		<action path="/removeContato" name="RemoveContatoForm" type="br.com.caelum.struts.action.RemoveContatoAction">
+			<forward name="ok" path="/listaContatos.do"/>
+		</action>
 		<action path="/novoContato" name="ContatoForm" input="/novo.jsp" type="br.com.caelum.struts.action.AdicionaContatoAction">
-			<forward name="ok" path="/listaContatos.do"></forward>
+			<forward name="ok" path="/listaContatos.do"/>
 		</action>
 	</action-mappings>
 	
