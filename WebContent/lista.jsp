@@ -12,7 +12,7 @@
 <a href="novo.jsp">Cadastrar</a><br><br>
 
 	<c:forEach var="contato" items="${contatos}">
-		${contato.id} - ${contato.nome} <a href="/struts/removeContato.do?contato.id=${contato.id}">Remover</a><br>
+		${contato.id} - ${contato.nome} <a href="/struts/removeContato.do?contato.id=${contato.id}">Remover</a> | <a href="mostraContato.do?contato.id=${contato.id}">Mostrar</a><br>
 	</c:forEach>
 
 </body>

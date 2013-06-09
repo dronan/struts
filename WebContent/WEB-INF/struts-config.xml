@@ -7,6 +7,7 @@
 	<form-beans>
 		<form-bean name="ContatoForm" type="br.com.caelum.struts.form.ContatoForm"/>
 		<form-bean name="RemoveContatoForm" type="br.com.caelum.struts.form.RemoveContatoForm"/>
+		<form-bean name="MostraContatoForm" type="br.com.caelum.struts.form.MostraContatoForm"/>
 	</form-beans>
 
 	<action-mappings>
@@ -25,6 +26,9 @@
 		</action>
 		<action path="/mudaIdioma" type="br.com.caelum.struts.action.MudaIdiomaAction">
 			<forward name="ok" path="/testa-mensagens.jsp"/>
+		</action>
+		<action path="/mostraContato" name="MostraContatoForm" type="br.com.caelum.struts.action.MostraContatoAction">
+			<forward name="mostra" path="/mostraContato.jsp"/>
 		</action>
 	</action-mappings>
 	
