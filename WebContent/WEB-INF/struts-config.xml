@@ -8,6 +8,7 @@
 		<form-bean name="ContatoForm" type="br.com.caelum.struts.form.ContatoForm"/>
 		<form-bean name="RemoveContatoForm" type="br.com.caelum.struts.form.RemoveContatoForm"/>
 		<form-bean name="MostraContatoForm" type="br.com.caelum.struts.form.MostraContatoForm"/>
+		<form-bean name="AlteraContatoForm" type="br.com.caelum.struts.form.AlteraContatoForm"/>
 	</form-beans>
 
 	<action-mappings>
@@ -29,6 +30,9 @@
 		</action>
 		<action path="/mostraContato" name="MostraContatoForm" type="br.com.caelum.struts.action.MostraContatoAction">
 			<forward name="mostra" path="/mostraContato.jsp"/>
+		</action>
+		<action path="/alteraContato" name="AlteraContatoForm" type="br.com.caelum.struts.action.AlteraContatoAction">
+			<forward name="ok" path="/listaContatos.do"/>
 		</action>
 	</action-mappings>
 	
